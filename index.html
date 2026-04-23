@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chetan Gupta | AI/ML Engineer & Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Chetan Gupta - AI/ML Engineer and Software Developer building real-world products with ML and full stack technology."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="container nav">
+        <a href="#top" class="brand">Chetan<span>Gupta</span></a>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" data-open="false">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <p class="eyebrow">AI/ML Engineer & Software Developer</p>
+            <h1>Chetan Gupta</h1>
+            <p class="typing-line">
+              <span id="typingText"></span>
+              <span class="typing-cursor" aria-hidden="true">|</span>
+            </p>
+            <p class="tagline">
+              Building real-world AI products, scalable backend systems, and production-ready applications for impact.
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="image/resume b.pdf" target="_blank" rel="noreferrer" class="btn btn-secondary" download>Download Resume</a>
+            </div>
+          </div>
+
+          <div class="hero-panel reveal reveal-delay">
+            <h3>Core Focus</h3>
+            <ul>
+              <li>RAG + Document Chatbot Systems</li>
+              <li>LLM Fine-tuning and Prompt Engineering</li>
+              <li>Full Stack Product Development</li>
+            </ul>
+            <div class="hero-stats">
+              <article>
+                <h4>5+</h4>
+                <p>Production-grade projects delivered</p>
+              </article>
+              <article>
+                <h4>AI + App</h4>
+                <p>Strong blend of ML and software engineering</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Skills</h2>
+            <p class="section-text">A complete snapshot of tools, languages, and technologies in one view.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h3><span class="icon">{ }</span> Languages</h3>
+              <div class="chip-wrap">
+                <span>Python</span><span>C</span><span>Kotlin</span><span>Basic SQL</span>
+              </div>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3><span class="icon">AI</span> AI / ML</h3>
+              <div class="chip-wrap">
+                <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>RAG</span><span>Fine-tuning</span>
+              </div>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3><span class="icon">[]</span> Libraries</h3>
+              <div class="chip-wrap">
+                <span>PyTorch</span><span>Pandas</span><span>NumPy</span><span>scikit-learn</span>
+              </div>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3><span class="icon">API</span> Backend</h3>
+              <div class="chip-wrap">
+                <span>Django</span><span>APIs</span><span>Firebase</span>
+              </div>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3><span class="icon">TOOL</span> Tools</h3>
+              <div class="chip-wrap">
+                <span>GitHub</span><span>Firebase</span><span>VS Code</span><span>Android Studio</span><span>Colab</span>
+              </div>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3><span class="icon">CLD</span> Cloud</h3>
+              <div class="chip-wrap">
+                <span>AWS (Basic)</span><span>Drive</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Projects</h2>
+            <p class="section-text">Featured work first, followed by additional implementations.</p>
+          </div>
+
+          <div class="featured-projects">
+            <article class="project-card featured-large reveal stagger" data-project-key="notelab">
+              <p class="project-badge">Main Project</p>
+              <h3>Study Material App - NoteLab</h3>
+              <p>
+                Android application for GHRCEN students to access structured academic resources. Running in production and
+                actively used in campus.
+              </p>
+              <p class="stack">Kotlin | Firebase | Android Studio | APIs</p>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-link">GitHub</a>
+                <button
+                  class="btn btn-demo"
+                  data-preview-type="image"
+                  data-preview-src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=80"
+                  data-project="Study Material App - NoteLab"
+                  data-project-key="notelab"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card featured-large reveal stagger" data-project-key="chatbot-rag">
+              <p class="project-badge">Main Project</p>
+              <h3>Create your Own AI Chatbot using RAG</h3>
+              <p>
+                AI chatbot that answers questions from uploaded files using RAG pipeline and language model generation.
+              </p>
+              <p class="stack">Python | RAG | NLP | LLM APIs</p>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-link">GitHub</a>
+                <button
+                  class="btn btn-demo"
+                  data-preview-type="image"
+                  data-preview-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80"
+                  data-project="Create your Own AI Chatbot using RAG"
+                  data-project-key="chatbot-rag"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="secondary-projects">
+            <article class="project-card reveal stagger" data-project-key="train-tracker">
+              <h3>Train Live Location Tracker</h3>
+              <p>
+                Real-time train tracking application for Indian railway using train number and API-based integration.
+              </p>
+              <p class="stack">Kotlin | REST API | Firebase</p>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-link">GitHub</a>
+                <button
+                  class="btn btn-demo"
+                  data-preview-type="video"
+                  data-preview-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  data-project="Train Live Location Tracker"
+                  data-project-key="train-tracker"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card reveal stagger" data-project-key="pdf-viewer">
+              <h3>PDF Viewer</h3>
+              <p>
+                Android app named Viewer with Gradle + Kotlin setup for reading, searching, and handling PDF resources.
+              </p>
+              <p class="stack">Kotlin | Gradle | Android</p>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-link">GitHub</a>
+                <button
+                  class="btn btn-demo"
+                  data-preview-type="image"
+                  data-preview-src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80"
+                  data-project="PDF Viewer"
+                  data-project-key="pdf-viewer"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card reveal stagger" data-project-key="fine-tuning">
+              <h3>LLM Fine-Tuning Project</h3>
+              <p>
+                Fine-tuned a pretrained LLaMA model for domain-specific instruction tasks and improved targeted performance.
+              </p>
+              <p class="stack">Python | PyTorch | LLaMA | Fine-tuning</p>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-link">GitHub</a>
+                <button
+                  class="btn btn-demo"
+                  data-preview-type="video"
+                  data-preview-src="https://www.youtube.com/embed/ysz5S6PUM-U"
+                  data-project="LLM Fine-Tuning Project"
+                  data-project-key="fine-tuning"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container reveal">
+          <h2>About</h2>
+          <p class="section-text">
+            I am an AI/ML Engineer and Software Developer focused on solving real-world problems through production-ready
+            applications. My work includes intelligent chatbots, RAG systems, and full-stack products with practical impact.
+          </p>
+
+          <div class="edu-table-wrap">
+            <table class="edu-table" aria-label="Educational qualifications">
+              <thead>
+                <tr>
+                  <th>Qualification</th>
+                  <th>Institute / Board</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>B.Tech - CSE (AI & ML)</td>
+                  <td>G.H. Raisoni College of Engineering, Nagpur (RTMNU)</td>
+                  <td>SGPA: 9.0 | CGPA: 8.83</td>
+                </tr>
+                <tr>
+                  <td>HSC - Class XII (Science Stream)</td>
+                  <td>State Board</td>
+                  <td>79%</td>
+                </tr>
+                <tr>
+                  <td>SSC - Class X</td>
+                  <td>State Board</td>
+                  <td>86%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container simple-contact reveal">
+          <article class="contact-info">
+            <h2>Contact</h2>
+            <p class="section-text">Reach me directly for collaboration and opportunities.</p>
+            <ul class="contact-links">
+              <li>Email: <a href="mailto:chetangupta@example.com">chetangupta@example.com</a></li>
+              <li>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">github.com/chetan</a></li>
+              <li>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noreferrer">linkedin.com/in/chetan</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="feedback" class="section feedback-section">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Feedback</h2>
+            <p class="section-text">Share quick feedback about this portfolio experience.</p>
+          </div>
+
+          <form class="feedback-form" id="feedbackForm" novalidate>
+            <label for="feedbackName">Name</label>
+            <input id="feedbackName" name="feedbackName" type="text" placeholder="Your name" required />
+
+            <label for="feedbackText">Feedback</label>
+            <textarea id="feedbackText" name="feedbackText" rows="4" placeholder="Write your feedback" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p class="form-status" id="feedbackStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-minimal"></div>
+    </footer>
+
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Close preview">x</button>
+        <h3 id="modalTitle">Project Preview</h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
