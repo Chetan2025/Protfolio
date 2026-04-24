@@ -10,7 +10,7 @@ const progressBar = document.getElementById('scrollProgress');
 const feedbackForm = document.getElementById('feedbackForm');
 const feedbackStatus = document.getElementById('feedbackStatus');
 const glows = document.querySelectorAll('.glow');
-const feedbackRecipientEmail = 'chetangupta@example.com';
+const feedbackRecipientEmail = 'chetangupta9764@gmail.com';
 
 const modal = document.getElementById('projectModal');
 const modalClose = document.getElementById('modalClose');
