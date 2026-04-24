@@ -12,6 +12,17 @@ const feedbackStatus = document.getElementById('feedbackStatus');
 const glows = document.querySelectorAll('.glow');
 const feedbackRecipientEmail = 'chetangupta9764@gmail.com';
 
+const splashScreen = document.createElement('div');
+splashScreen.className = 'splash-screen';
+splashScreen.innerHTML = `
+  <div class="splash-screen__card">
+    <p class="splash-screen__eyebrow">Portfolio</p>
+    <h2>Chetan Gupta</h2>
+    <p>AI/ML Engineer & Software Developer</p>
+  </div>
+`;
+document.body.appendChild(splashScreen);
+
 const modal = document.getElementById('projectModal');
 const modalClose = document.getElementById('modalClose');
 const modalBody = document.getElementById('modalBody');
@@ -103,6 +114,19 @@ if (year) {
 window.requestAnimationFrame(() => {
   document.body.classList.add('ready');
 });
+
+function hideSplashScreen() {
+  window.setTimeout(() => {
+    splashScreen.classList.add('hide');
+    window.setTimeout(() => splashScreen.remove(), 420);
+  }, 1200);
+}
+
+if (document.readyState === 'complete') {
+  hideSplashScreen();
+} else {
+  window.addEventListener('load', hideSplashScreen, { once: true });
+}
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
