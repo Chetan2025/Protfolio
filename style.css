@@ -534,6 +534,13 @@ h2 {
   font-size: 0.86rem;
 }
 
+.media-note {
+  font-size: 0.82rem;
+  color: #dff6ff;
+  border-left: 2px solid rgba(76, 201, 255, 0.75);
+  padding-left: 0.45rem;
+}
+
 .project-mobile-tag {
   width: fit-content;
   font-size: 0.72rem;

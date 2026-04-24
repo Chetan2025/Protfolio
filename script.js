@@ -10,6 +10,7 @@ const progressBar = document.getElementById('scrollProgress');
 const feedbackForm = document.getElementById('feedbackForm');
 const feedbackStatus = document.getElementById('feedbackStatus');
 const glows = document.querySelectorAll('.glow');
+const feedbackRecipientEmail = 'chetangupta@example.com';
 
 const modal = document.getElementById('projectModal');
 const modalClose = document.getElementById('modalClose');
@@ -422,8 +423,13 @@ if (feedbackForm && feedbackStatus) {
       return;
     }
 
-    feedbackStatus.textContent = `Thanks ${name}, feedback submitted.`;
+    const subject = encodeURIComponent(`Portfolio Feedback from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\n\nFeedback:\n${message}`);
+    const mailtoUrl = `mailto:${feedbackRecipientEmail}?subject=${subject}&body=${body}`;
+
+    feedbackStatus.textContent = `Thanks ${name}. Opening your email app to send feedback.`;
     feedbackStatus.style.color = '#9af5bf';
+    window.location.href = mailtoUrl;
     feedbackForm.reset();
   });
 }
