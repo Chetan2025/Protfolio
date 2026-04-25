@@ -175,13 +175,13 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: 1.08fr auto;
   gap: 1.6rem;
-  align-items: stretch;
+  align-items: center;
 }
 
 .hero-content,
-.hero-panel {
+.hero-profile {
   opacity: 0;
   transform: translateY(20px) scale(0.98);
 }
@@ -190,7 +190,7 @@ body.ready .hero-content {
   animation: heroEnter 0.9s ease forwards;
 }
 
-body.ready .hero-panel {
+body.ready .hero-profile {
   animation: heroEnter 0.95s ease 0.12s forwards;
 }
 
@@ -231,6 +231,74 @@ h1 {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+}
+
+.hero-profile {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.hero-profile::before {
+  content: "";
+  position: absolute;
+  width: calc(clamp(180px, 24vw, 280px) + 22px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid rgba(147, 197, 253, 0.45);
+  animation: haloPulse 3s ease-in-out infinite;
+  transition: border-color 0.25s ease, opacity 0.25s ease;
+}
+
+.profile-frame {
+  width: clamp(180px, 24vw, 280px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(145deg, #60a5fa, #2563eb);
+  border: 1px solid rgba(191, 219, 254, 0.55);
+  box-shadow: 0 0 0 7px rgba(96, 165, 250, 0.22), 0 16px 35px rgba(15, 23, 42, 0.24);
+  animation: profileFloat 4.5s ease-in-out infinite;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  background: #0f172a;
+  transition: transform 0.45s ease;
+}
+
+.hero-profile:hover::before {
+  border-color: rgba(191, 219, 254, 0.95);
+  animation-duration: 1.9s;
+}
+
+.hero-profile:hover .profile-frame {
+  box-shadow: 0 0 0 9px rgba(96, 165, 250, 0.26), 0 20px 42px rgba(15, 23, 42, 0.28);
+}
+
+.hero-profile:hover .profile-frame img {
+  transform: scale(1.06);
+}
+
+.profile-frame.no-image {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 28% 25%, #93c5fd 0%, #2563eb 58%, #1e3a8a 100%);
+}
+
+.profile-frame.no-image::after {
+  content: "CG";
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  font-weight: 700;
 }
 
 .btn {
@@ -953,11 +1021,47 @@ body.modal-open {
   }
 }
 
+@keyframes profileFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes haloPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.25;
+  }
+}
+
 @media (max-width: 960px) {
   .hero-grid,
   .contact-grid,
   .featured-projects {
     grid-template-columns: 1fr;
+  }
+
+  .hero-profile {
+    margin: 0.25rem 0;
+  }
+
+  .hero-profile::before {
+    width: calc(clamp(170px, 46vw, 250px) + 18px);
+  }
+
+  .profile-frame {
+    width: clamp(170px, 46vw, 250px);
   }
 
   .secondary-projects,
