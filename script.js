@@ -433,6 +433,27 @@ window.addEventListener('keydown', (event) => {
   }
 });
 
+// Google Cloud Achievement - Image Viewer
+const googleCloudBtn = document.querySelector('.achievement-google-cloud');
+if (googleCloudBtn) {
+  googleCloudBtn.addEventListener('click', () => {
+    if (!modal || !modalBody || !modalTitle) return;
+
+    const imageSrc = 'image/acivedments/Google cloud.jpeg';
+    modalState.title = 'Google Cloud';
+    modalState.images = [imageSrc];
+    modalState.video = '';
+    modalState.device = 'desktop';
+    modalState.activeImageIndex = 0;
+
+    modalTitle.textContent = 'Google Cloud Achievement';
+    modalBody.innerHTML = `<div class="project-modal-layout"><div class="project-gallery-wrap"><div class="gallery-frame"><img class="modal-media gallery-main" src="${imageSrc}" alt="Google Cloud Achievement" loading="lazy" /></div></div></div>`;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  });
+}
+
 if (feedbackForm && feedbackStatus) {
   feedbackForm.addEventListener('submit', (event) => {
     event.preventDefault();
