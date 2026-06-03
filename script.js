@@ -34,7 +34,6 @@ const mobileProjectKeys = new Set(['notelab', 'pdf-viewer']);
 const projectMediaMap = {
   'notelab': {
     images: [
-      'image/notelab/notelab_01.png',
       'image/notelab/notelab_02.png',
       'image/notelab/notelab_03.png',
       'image/notelab/notelab_04.png',
@@ -47,6 +46,15 @@ const projectMediaMap = {
       'image/notelab/notelab_11.png',
       'image/notelab/notelab_12.png',
       'image/notelab/notelab_13.jpg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM.jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (1).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (2).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (3).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (4).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (5).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (6).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (7).jpeg',
+      'image/notelab/WhatsApp Image 2026-06-02 at 11.47.01 AM (8).jpeg',
     ],
     video: 'image/notelab/Screen Recording 2026-04-23 123440.mp4',
     device: 'mobile',
@@ -78,6 +86,7 @@ const projectMediaMap = {
   },
   'pdf-viewer': {
     images: [
+      'image/notelab/notelab_01.png',
       'image/pdf viewer/pdf_viewer_01.png',
       'image/pdf viewer/pdf_viewer_02.png',
       'image/pdf viewer/pdf_viewer_03.png',
@@ -478,3 +487,39 @@ if (feedbackForm && feedbackStatus) {
     feedbackForm.reset();
   });
 }
+
+  // Force-download fallback for resume link (works when browser opens PDF instead of downloading)
+  (() => {
+    try {
+      const resumeLink = document.querySelector('a[href$="resume.pdf"]');
+      if (!resumeLink) return;
+
+      resumeLink.addEventListener('click', async (e) => {
+        // Let native download attribute work when supported and user holds modifier keys
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+
+        const href = resumeLink.getAttribute('href');
+        if (!href) return;
+
+        try {
+          const resp = await fetch(href, { cache: 'no-store' });
+          if (!resp.ok) throw new Error('Network response not OK');
+          const blob = await resp.blob();
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = resumeLink.getAttribute('download') || 'resume.pdf';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+        } catch (err) {
+          // Fallback: open in new tab so user can manually save
+          window.open(href, '_blank', 'noopener');
+        }
+      });
+    } catch (err) {
+      // silent
+    }
+  })();

@@ -1172,6 +1172,53 @@ body.modal-open {
 
 }
 
+/* Mobile navigation and CTA polish */
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 1rem;
+    top: 74px;
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.45);
+  }
+
+  .nav-links[data-open="true"] {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #e6eefc;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+}
+
+/* Make secondary button more visible */
+.btn-secondary {
+  background: linear-gradient(90deg, #334155 0%, #2563eb 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
 /* === ABOUT - centered polished layout === */
 #about {
   background:
