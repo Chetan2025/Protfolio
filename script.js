@@ -487,39 +487,3 @@ if (feedbackForm && feedbackStatus) {
     feedbackForm.reset();
   });
 }
-
-  // Force-download fallback for resume link (works when browser opens PDF instead of downloading)
-  (() => {
-    try {
-      const resumeLink = document.querySelector('a[href$="resume.pdf"]');
-      if (!resumeLink) return;
-
-      resumeLink.addEventListener('click', async (e) => {
-        // Let native download attribute work when supported and user holds modifier keys
-        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        e.preventDefault();
-
-        const href = resumeLink.getAttribute('href');
-        if (!href) return;
-
-        try {
-          const resp = await fetch(href, { cache: 'no-store' });
-          if (!resp.ok) throw new Error('Network response not OK');
-          const blob = await resp.blob();
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = resumeLink.getAttribute('download') || 'resume.pdf';
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
-          URL.revokeObjectURL(url);
-        } catch (err) {
-          // Fallback: open in new tab so user can manually save
-          window.open(href, '_blank', 'noopener');
-        }
-      });
-    } catch (err) {
-      // silent
-    }
-  })();
