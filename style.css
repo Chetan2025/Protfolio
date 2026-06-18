@@ -473,7 +473,7 @@ h1 {
 }
 .project-card-glow {
   position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(circle at 70% 20%, rgba(37,99,235,0.06), transparent 60%);
+  background: radial-gradient(circle at 70% 20%, rgba(232, 169, 22, 0.06), transparent 60%);
   opacity: 0; transition: opacity 0.3s ease;
 }
 .project-card:hover .project-card-glow { opacity: 1; }
