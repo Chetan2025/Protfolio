@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8EDF2">
+
+    <!-- ===== TOP BAR ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="@color/primary_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:id="@+id/btnBackDetails"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_circle_white_stroke"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back_arrow" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Details"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile: 9764407745"
+                android:textColor="#BBDEFB"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_share_white"
+            android:contentDescription="Share"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- ===== SCROLLABLE CONTENT ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="28dp">
+
+            <!-- Thank You Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="14dp"
+                android:text="Thank You Rohen Gupta, Happy Journey!"
+                android:textColor="#444444"
+                android:textSize="15sp" />
+
+            <!-- ===== FULL TICKET CARD ===== -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:elevation="6dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_detail_ticket_outer"
+                    android:outlineProvider="background"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                <!-- ~~ DARK DYNAMIC SECTION ~~ -->
+                <!-- Must set clipChildren=false on the container so rotated text strips don't clip -->
+                <!-- ~~ DARK DYNAMIC SECTION: vertical wrapper ~~ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_dark_section_top">
+
+                    <!-- Teal header strip: "Dynamic preview will close in" -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:background="@drawable/bg_teal_header_top"
+                        android:includeFontPadding="false" />
+
+                    <!-- Main dark row: left strip + center + right strip -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="204dp"
+                        android:orientation="horizontal"
+                        android:background="#0C0D1E"
+                        android:clipChildren="false">
+
+                        <!-- LEFT STRIP: "INDIAN RAILWAYS" bottom→top -->
+                        <FrameLayout
+                            android:layout_width="44dp"
+                            android:layout_height="match_parent"
+                            android:background="#0C0D1E"
+                            android:clipChildren="false">
+
+                            <TextView
+                                android:layout_width="204dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.16"
+                                android:rotation="-90"
+                                android:text="INDIAN RAILWAYS"
+                                android:textColor="#625D5D"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:orientation="vertical"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal">
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:background="#625D5D" />
+
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <!-- CENTER: timer split + date info -->
+
+                        <!-- RIGHT DARK STRIP: "भारतीय रेल" top→bottom -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingStart="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="4dp"
+                            android:paddingBottom="12dp">
+
+                            <TextView
+                                android:layout_width="247dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Dynamic preview will close in"
+                                android:textColor="#F5F6F8"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <!-- TIMER: large MINUTES + smaller subscript :SECONDS -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvTimerMinutes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:letterSpacing="-0.03"
+                                    android:text="05"
+                                    android:textColor="#FF2525"
+                                    android:textSize="62sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvTimerSecondsColon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginBottom="0dp"
+                                    android:includeFontPadding="false"
+                                    android:text=":00"
+                                    android:textColor="#FF2525"
+                                    android:textSize="62sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Tick divider: line | orange bar | line -->
+
+                            <!-- "Ticket Booking Date & Time" -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Ticket Booking Date &amp; Time"
+                                android:textColor="#7878A0"
+                                android:textSize="12sp" />
+
+                            <!-- Booking date bold orange/gold -->
+                            <TextView
+                                android:id="@+id/tvBookingDateLarge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="10 Mar 2026, 10:56"
+                                android:textColor="#F4A200"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <!-- Train ID -->
+                            <TextView
+                                android:id="@+id/tvTrainId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:text="R17380"
+                                android:textColor="#AAAACC"
+                                android:textSize="13sp" />
+
+                            <!-- Non-Transferable -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="Ticket is Non-Transferable"
+                                android:textColor="#505065"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="44dp"
+                            android:layout_height="match_parent"
+                            android:background="#0C0D1E"
+                            android:clipChildren="false">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="204dp"
+                                android:layout_height="46dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0.16"
+                                android:rotation="-90"
+                                android:text="भारतीय रेल"
+                                android:textColor="#625D5D"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:orientation="vertical"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal">
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:id="@+id/view10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:background="#625D5D" />
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="10dp"
+                                    android:background="#625D5D" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Separator line -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#3A3131" />
+
+                <!-- ~~ WHITE JOURNEY DETAILS SECTION ~~ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_white_section_bottom"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="16dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                    <!-- Journey Ticket | Code -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Journey Ticket"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tvJourneyTicketCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="XS4GEB4030"
+                            android:textColor="#111111"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Route: GONDIA JN. - 130 km - NAGPUR -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/tvFromStation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="GONDIA JN."
+                            android:textColor="#1A1A1A"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium" />
+                        <TextView
+                            android:id="@+id/tvRouteDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—130 km—"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tvToStation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="NAGPUR"
+                            android:textColor="#1A1A1A"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Via | Passenger label -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Via"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Passenger"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!-- TMR | 1 Adult, 0 Child -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp">
+                        <TextView
+                            android:id="@+id/tvViaValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TMR"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium" />
+                        <TextView
+                            android:id="@+id/tvPassengerCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Adult, 0 Child"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Booked on | *Valid Till labels -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Booked on"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Valid Till"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!-- Dates -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBookedOnValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="10/03/2026 10:56:39"
+                            android:textColor="#1A1A1A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvValidTillValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10/03/2026 13:56"
+                            android:textColor="#1A1A1A"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+
+                    <!-- Class | Fare info -->
+
+                    <!-- Transaction ID -->
+
+                    <TextView
+                        android:id="@+id/tvClassFareInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SECOND | SUPERFAST | JOURNEY | ₹80.00"
+                        android:textColor="#1A1A1A"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/tvTransactionId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IR:27AAAGM0289C2ZI"
+                        android:textColor="#777777"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Single perforation line with side round cuts (below IR number) -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_perforation_dashed" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="-16dp"
+                        android:layout_marginEnd="-16dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <View
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginStart="-13dp"
+                            android:background="@drawable/bg_detail_notch" />
+
+                        <View
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="-13dp"
+                            android:background="@drawable/bg_detail_notch" />
+                    </FrameLayout>
+
+                    <!-- Journey validity note -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Valid for start of journey within 3 hour or until departure of the last train."
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        android:lineSpacingMultiplier="1.3" />
+
+                    <!-- Non-refundable warning box -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#FFF0F0"
+                        android:padding="12dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Note: This ticket is non refundable. Ticket is stored locally on the device. Please do not change your handset or perform factory reset."
+                            android:textColor="#CC3333"
+                            android:textSize="12sp"
+                            android:lineSpacingMultiplier="1.4"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- ===== BOOK CONNECTING JOURNEY BUTTON ===== -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/btnBookConnecting"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_connecting_btn"
+                    android:gravity="center"
+                    android:text="Book Connecting Journey"
+                    android:textColor="#1565C0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+            </FrameLayout>
+
+            <!-- ===== QR CODE SECTION ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="22dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_qr_placeholder">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="184dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="QR Code"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/qr_code" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- ===== DO YOU KNOW SECTION ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you know?"
+                    android:textColor="#111111"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IR recovers only 57% of cost of travel on an average"
+                    android:textColor="#444444"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This ticket is booked on a personal user ID. It&#8217;s sale/purchase is an offence u/s 143 of the Railways Act, 1989"
+                    android:textColor="#444444"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For enquiry and integrated railway helpline, please dial 139"
+                    android:textColor="#444444"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.4" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

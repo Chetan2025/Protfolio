@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Handshake icon for Rail Madad -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#E05C4B"
+        android:pathData="M11,6H9.17L7,3.87V2H5v2.13L2.5,6.5 4,8l1,-1v9H3v2h4v1h2v-1h2v1h2v-1h2v-9l1,1 1.5,-1.5 -2.5,-2.37V4h-2zM9,14H7v-2h2zM13,14h-2v-2h2zM15.5,6.5C14.25,5.23 12.71,4.37 11,4.1V2h2v1.17L15.87,6H17v1l-1.5,1.5L14,7z" />
+</vector>

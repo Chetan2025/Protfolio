@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RailOne</string>
+    <string name="order_food">Order\nFood</string>
+    <string name="file_refund">File\nRefund</string>
+    <string name="rail_madad">Rail\nMadad</string>
+    <string name="go_to_waves">Go To\nWAVES</string>
+    <string name="do_you_know">Do You know?</string>
+    <string name="follow_us">Follow Us On Social Media Platforms</string>
+    <string name="fact1">First ever passenger train was run between Bori Bandar to Thane on April 16, 1853.</string>
+    <string name="fact2">Chenab Railway Bridge in Dharot, Jammu &amp; Kashmir is the World\'s highest Railway Bridge.</string>
+    <string name="fact3">None of the Railway bridge piers in the world are as tall as Chenab Bridge piers.</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_bookings">My Bookings</string>
+    <string name="nav_you">You</string>
+    <string name="nav_menu">Menu</string>
+</resources>
